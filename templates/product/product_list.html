@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <header class="header text-center">
+        <h1 class="header__title">{{ shop_name }}</h1>
+        <p class="header__info">{{ shop_header_info }}</p>
+    </header>
+    <div class="products_list">
+        <div class="row">
+
+            {% if not products %}
+                <p class="alert alert-success">Тауарлар жоқ</p>
+            {% endif %}
+
+            {% for product in products %}
+                <div class="col-md-4">
+                    <div class="products_list__item">
+                        <div class="card">
+                            <img class="card-image-top"
+                                 src="{{ product.image.url }}"
+                                 alt="">
+                            <div class="card-body">
+                                <h2 class="product__name">{{ product.name }}</h2>
+                                <p class="product__price">{{ product.price }} тг</p>
+                                <div class="btn-group">
+                                    <a href="{{ product.buy_link }}"
+                                       class=" product__action_btn btn btn-primary btn-lg">Тапсырыс беру</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

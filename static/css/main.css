@@ -1,0 +1,51 @@
+h1, h2, .btn {
+    font-family: inherit;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.products_list__item {
+    margin-bottom: 30px;
+}
+
+.products_list__item img {
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.header {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.header__title {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.header__info {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.product__name {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.product__action_btn {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.product__price {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
